@@ -4,6 +4,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 15px;
+
+        @media(min-width: 768px) {
+            padding-top: 22px;
+        }
+
+        @media(min-width: 1728px) {
+            padding-top: 77px;
+        }
     }
 
     &__logo {
@@ -83,9 +92,9 @@
 
         &--hidden {
             @media (min-width: 767px) {
-            display: none;
+                display: none;
             }
         }
     }
 }
-    
+
