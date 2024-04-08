@@ -12,29 +12,36 @@
       <div class="header__container container">
 
         <a class="header__logo" href="#">
-          <img src="img/logo_top.svg" alt="logo of site">
+          <img src="img/logo.svg" alt="logo of site">
         </a>
-        
-        <nav class="header__nav">
-          <ul class="header__menu">
-            <li class="header__menu-item"><a>Главная</a></li>
-            <li class="header__menu-item"><a href="#">Магазин</a></li>
-            <li class="header__menu-item"><a href="#">Контакты</a></li>
+
+        <nav class="header__menu header__menu--showed">
+          <a class="header__menu-close" href="#">
+            <img src="img/menu_close_icon.svg" alt="menu icon">
+          </a>
+
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a href="#">Репродукции</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#">Новинки</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#">О нас</a>
+            </li>
           </ul>
         </nav>
 
         <div class="header__user-action">
-          <button class="header__button ">
-            <img src="img/search_icon.svg" alt="search icon">
-          </button>
-          <button class="header__button ">
+          <a class="header__menu-open" href="#">
+            <img src="img/menu_open_icon.svg" alt="menu icon">
+          </a>
+          <a class="header__cart" href="#">
             <img src="img/shopping_cart_icon.svg" alt="shopping cart icon">
-          </button>
-          <button class="header__button header__button--hidden">
-            <img src="img/menu_icon.svg" alt="shopping cart icon">
-          </button>
+          </a>
         </div>
-        
+
       </div>
     </header>
   </body>
