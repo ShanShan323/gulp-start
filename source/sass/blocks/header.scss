@@ -8,6 +8,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
         padding-top: 15px;
 
         @media(min-width: 768px) {
