@@ -1,9 +1,14 @@
 .header {
-
+    @media (min-width:1728px) {
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+    }
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
         padding-top: 15px;
 
         @media(min-width: 768px) {
