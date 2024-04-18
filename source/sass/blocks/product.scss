@@ -1,0 +1,192 @@
+.product {
+    width: 100%;
+    padding: 37px 19px 23px;
+    border: 2px solid #DEDEDE;
+    border-radius: 20px;
+    position: relative;
+
+    @media (min-width: 768px) {
+        padding: 33px 30px 28px;
+    }
+
+    @media (min-width: 1728px) {
+        padding: 28px 40px 27px;
+    }
+
+    &--big {
+        @media (min-width: 768px) {
+            padding: 60px 40px 50px;
+        }
+
+        @media (min-width: 1728px) {
+            padding: 98px 78px 30px;
+        }
+
+        .product__image {
+            @media (min-width: 768px) {
+                width: 470px;
+                height: 470px;
+            }
+
+            @media (min-width: 1728px) {
+                width: 755px;
+                height: 755px;
+            }
+        }
+
+        .product__name {
+            @media (min-width: 768px) {
+                font-size: 64px;
+                line-height: 80px;
+            }
+        }
+
+        .product__price {
+            @media (min-width: 768px) {
+                font-size: 48px;
+                line-height: 66px;
+                margin-right: 65px;
+            }
+
+            @media (min-width: 1728px) {
+                margin-right: 57px;
+            }
+        }
+
+        .product__old-price {
+            @media (min-width: 768px) {
+                font-size: 24px;
+                line-height: 29px;
+            }
+        }
+    }
+
+    &--hot-icon {
+        &::after {
+            background-image: url("../img/hot-icon.svg");
+            width: 59px;
+            height: 32px;
+            content: "HOT!";
+            position: absolute;
+            font-size: 16px;
+            line-height: 35px;
+            text-align: center;
+            color: #fff;
+            top: 10%;
+            left: 0;
+            filter: drop-shadow(8px 7px 16.1px #00000015);
+
+            @media (min-width: 768px) {
+                width: 120px;
+                height: 65px;
+                font-size: 30px;
+                line-height: 70px;
+            }
+
+        }
+    }
+
+    &--new-icon {
+        &::after {
+            background-image: url("../img/new-icon.svg");
+            width: 59px;
+            height: 32px;
+            content: "NEW";
+            position: absolute;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            top: 10%;
+            left: 0;
+            filter: drop-shadow(8px 7px 16.1px #00000015);
+        }
+    }
+
+    &__image {
+        display: block;
+        margin: 0 auto;
+        width: 212px;
+        height: 212px;
+
+        @media (min-width: 1728px) {
+            width: 363px;
+            height: 363px;
+        }
+    }
+
+    &__name {
+        display: block;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28px;
+        margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 35px;
+        }
+        
+        @media (min-width: 1728px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__price-wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        @media (min-width: 1728px) {
+            align-items: baseline;
+        }
+    }
+
+    &__price {
+        font-size: 24px;
+        line-height: 33px;
+        margin-right: 20px;
+
+        @media (min-width: 1728px) {
+            margin-right: 25px;
+        }
+    }
+
+    &__old-price {
+        font-size: 18px;
+        line-height: 24px;
+        text-decoration: line-through;
+        margin-right: auto;
+    }
+
+    &__button {
+        @include clear-button;
+
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background-color: #000;
+        background-image: url(../img/arrow-for-button.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media (min-width: 1728px) {
+            width: 58px;
+            height: 58px;
+            background-size: 18px;
+        }
+
+        &--big {
+            @media (min-width: 768px) {
+                width: 65px;
+                height: 65px;
+                background-size: 20px;
+            }
+
+            @media (min-width: 1728px) {
+                width: 118px;
+                height: 118px;
+                background-size: 40px;
+            }
+        }
+    }
+}
