@@ -1,0 +1,42 @@
+.slide-banner {
+    &__wrapper {
+        position: relative;
+    }
+
+    &__indicator {
+        position: absolute;
+        top: 94%;
+        right: 34%;
+
+        @media (min-width: 768px) {
+            top: 95%;
+            right: 0;
+        }
+    }
+
+    &__swap-left {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            width: 19px;
+            height: 11px;
+            top: 48%;
+            left: 1%;
+        }
+    }
+
+    &__swap-right {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            width: 19px;
+            height: 11px;
+            top: 48%;
+            right: 1%;
+        }
+    }
+}

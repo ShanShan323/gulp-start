@@ -1,0 +1,35 @@
+.title {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 500;
+
+    @media (min-width: 768px) {
+        font-size: 45px;
+        line-height: 62px;
+    }
+
+    &--line-around {
+        &::before,
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 41px;
+            height: 3px;
+            background-color: #000;
+            vertical-align: middle;
+            transform: translateY(-2px);
+        }
+
+        &::before {
+            margin-right: 18px;
+        }
+
+        &::after {
+            margin-left: 18px;
+        }
+    }
+
+    &--text-center {
+        text-align: center;
+    }
+}

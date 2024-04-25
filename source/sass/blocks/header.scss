@@ -157,12 +157,6 @@
         @media (min-width: 768px) {
             gap: 44px;
         }
-    }
-
-    &__button {
-        @include clear-button;
-
-        position: relative;
 
         img {
             width: 20px;
@@ -174,16 +168,30 @@
             }
         }
 
-        &--hidden {
-            @media (min-width: 768px) {
-                display: none;
-            }
+        button {
+            @include clear-button;
+
+            position: relative;
+        }
+    }
+
+    &__open-menu {
+        @media (min-width: 768px) {
+            display: none;
         }
 
-        &--closed {
+        &--hidden {
             display: none;
         }
     }
+
+    &__close-menu {
+        &--hidden {
+            display: none;
+        }
+    }
+
+
 
     &__item-counter {
         display: flex;

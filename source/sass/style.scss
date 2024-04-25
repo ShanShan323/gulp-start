@@ -1,10 +1,22 @@
 @import 'common/fonts.scss';
 @import 'common/clear-button.scss';
 @import 'common/clear-list.scss';
+@import 'common/clear-input.scss';
 
 @import 'root.scss';
 @import 'blocks/container.scss';
+@import 'blocks/title.scss';
+@import 'blocks/button.scss';
+@import 'blocks/slider-pagination.scss';
+@import 'blocks/modal.scss';
 @import 'blocks/header.scss';
 @import 'blocks/hero.scss';
+@import 'blocks/marketplace-block.scss';
+@import 'blocks/popular-block.scss';
+@import 'blocks/banner.scss';
+@import 'blocks/slide-banner.scss';
+@import 'blocks/card.scss';
 @import 'blocks/product.scss';
 @import 'blocks/best-selling.scss';
+@import 'blocks/reviews.scss';
+@import 'blocks/footer.scss';

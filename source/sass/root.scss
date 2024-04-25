@@ -16,3 +16,7 @@ a {
   color: inherit;
 }
 
+button {
+  @include clear-button;
+}
+
