@@ -1,40 +1,55 @@
-let burger  = document.querySelectorAll('.js-burger');
-let menu    = document.querySelector('.burger-panel');
-let burgerButton  = document.querySelector('.burger');
-let body  = document.querySelector('body');
+const buttonOpenMenu = document.querySelector(`.header__open-menu`);
+const buttonCloseMenu = document.querySelector(`.header__close-menu`);
+const headerNav = document.querySelector(`.header__nav`);
 
-let i;
-for (i = 0; i < burger.length; i++) {
-  burger[i].onclick = function() {
-    menu.classList.toggle("active");
-    burgerButton.classList.toggle("burger--open");
-    body.classList.toggle("body-lock");
-  }
+buttonOpenMenu.addEventListener (`click`, () => {
+    headerNav.classList.add(`header__nav--showed`);
+    buttonCloseMenu.classList.remove(`header__close-menu--hidden`);
+    buttonOpenMenu.classList.add(`header__open-menu--hidden`);
+    buttonCloseMenu.addEventListener(`click`, closeMenu);
+ });
+
+const closeMenu = () => {
+    headerNav.classList.remove(`header__nav--showed`);
+    buttonCloseMenu.classList.add(`header__close-menu--hidden`);
+    buttonOpenMenu.classList.remove(`header__open-menu--hidden`);
+    buttonCloseMenu.removeEventListener(`click`, closeMenu);
 };
 
-window.onscroll = function() {myFunction()};
-let headerGo = document.querySelector('.header');
-let main = document.querySelector('main');
-let sticky = headerGo.offsetTop;
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    headerGo.classList.add("header--sticky");
-    main.classList.add("main");
-  } else {
-    headerGo.classList.remove("header--sticky");
-    main.classList.remove("main");
-  }
-}
+const buttonAddItem = document.querySelectorAll(`.product__button`);
+const buttonContinue = document.querySelector(`.modal__continue`);
+const closeModal = document.querySelector(`.modal__close`);
+const modal = document.querySelector(`.modal`);
 
-let acc = document.getElementsByClassName("tab__button");
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("tab__button--open");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
+
+buttonAddItem.forEach((button) => {
+    button.addEventListener (`click`, () => {
+        modal.classList.remove(`modal--hidden`);
+        buttonContinue.addEventListener(`click`, closeModalWindow);
+        closeModal.addEventListener(`click`, closeModalWindow);
+    })
+});
+
+const closeModalWindow = () => {
+    modal.classList.add(`modal--hidden`);
+    buttonContinue.removeEventListener(`click`, closeModalWindow);
+    closeModal.removeEventListener(`click`, closeModalWindow);
+};
+
+const buttonSubsription = document.querySelector(`.footer__button`);
+const footerModal = document.querySelector(`.footer__sub-modal`);
+const closeSubs = document.querySelector(`.footer__sub-modal > .modal__close`);
+
+buttonSubsription.addEventListener(`click`, () => {
+    footerModal.classList.remove(`modal--hidden`);
+    closeSubs.addEventListener(`click`, closeSubModal);
+});
+
+const closeSubModal = () => {
+    footerModal.classList.add(`modal--hidden`);
+    closeSubs.removeEventListener(`click`, closeSubModal);
+};
+
+buttonSubsription.addEventListener( `click`, (event) => {
+    event.preventDefault();
+});

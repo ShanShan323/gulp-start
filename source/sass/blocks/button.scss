@@ -1,0 +1,15 @@
+.button {
+
+
+    &--text-white {
+        color: #FFFFFF;
+    }
+
+    &--bg-black {
+        background-color: #000000;
+    }
+
+    &--shadow {
+        box-shadow: 2px 15px 20px 13px rgb(0 0 0 / 16%);
+    }
+}
