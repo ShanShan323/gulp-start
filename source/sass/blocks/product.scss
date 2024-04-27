@@ -71,7 +71,7 @@
         }
     }
 
-    &--hot-icon {
+    &--hot {
         &::after {
             background-image: url("../img/hot-icon.svg");
             width: 59px;
@@ -96,7 +96,7 @@
         }
     }
 
-    &--new-icon {
+    &--new {
         &::after {
             background-image: url("../img/new-icon.svg");
             width: 59px;
