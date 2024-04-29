@@ -2,9 +2,18 @@
     position: relative;
 
     &__container {
+        padding-top: 38px;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media (min-width: 768px) {
+            padding-top: 80px;
+        }
+
+        @media (min-width: 1728px) {
+            padding-top: 100px;
+        }
     }
 
     &__add-item {
