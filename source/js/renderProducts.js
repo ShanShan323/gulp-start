@@ -3,7 +3,7 @@ export default (products, template, target, isTargetList = false, templateClass 
 
     const fragment = document.createDocumentFragment();
 
-    let productElement = template.querySelector('.product');
+    let productElement = template.querySelector('.best-selling__product');
 
     if(isTargetList) {
         const node = document.createElement('li');
@@ -15,12 +15,13 @@ export default (products, template, target, isTargetList = false, templateClass 
 
         node.classList.add(templateClass);
         productElement = node;
-    } else {
-        const node = document.createElement(`div`);
-        node.appendChild(productElement);
-        node.classList.add(templateClass);
-        productElement = node;
-    }
+    } 
+    // else {
+    //     const node = document.createElement(`div`);
+    //     node.appendChild(productElement);
+    //     node.classList.add(templateClass);
+    //     productElement = node;
+    // }
 
 
     products.forEach( product => {

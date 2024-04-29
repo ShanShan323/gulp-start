@@ -35,22 +35,4 @@ export default [
         price: '2999',
         oldPrice: '3999'
     },
-    {
-        id: 5,
-        isBig: false,
-        status: 'new',
-        image: 'img/best-selling-sneaker-2.png',
-        name: 'Slick sneaker shoe',
-        price: '2999',
-        oldPrice: '3999'
-    },
-    {
-        id: 6,
-        isBig: false,
-        status: 'new',
-        image: 'img/best-selling-sneaker-2.png',
-        name: 'Slick sneaker shoe',
-        price: '2999',
-        oldPrice: '3999'
-    },
 ]
