@@ -38,12 +38,24 @@ export default (products, template, target, isTargetList = false, templateClass 
 
 
         itemElement.dataset.productId = id;
-        imageElement.src = image;
-        nameElement.textContent = name;
-        priceElement.textContent = `${price} ₽`;
-        oldPriceElement.textContent = `${oldPrice} ₽`;
 
-        if(isBig) {
+        if(image?.length) {
+            imageElement.src = image;
+        }
+
+        if(name?.length) {
+            nameElement.textContent = name;
+        }
+        
+        if(price?.length) {
+            priceElement.textContent = `${price} ₽`;
+        }
+
+        if(oldPrice?.length) {
+            oldPriceElement.textContent = `${oldPrice} ₽`;
+        }
+
+        if(isBig!==undefined && isBig) {
             productItem.classList.add('product--big');
             itemElement.classList.add('best-selling__product--g-1-3');
             buttonElement.classList.add('product__button--big');
@@ -51,7 +63,7 @@ export default (products, template, target, isTargetList = false, templateClass 
             itemElement.classList.add('best-selling__product--small');
         }
 
-        if(status) {
+        if(status?.length) {
             productItem.classList.add(`product--${status}`);
         }
 
