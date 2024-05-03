@@ -1,5 +1,7 @@
 
 export default (products, template, target, isTargetList = false, templateClass = '') => {
+    console.log(products);
+    console.log(typeof products);
 
     const fragment = document.createDocumentFragment();
 
@@ -49,7 +51,7 @@ export default (products, template, target, isTargetList = false, templateClass 
             itemElement.classList.add('best-selling__product--small');
         }
 
-        if(status.length) {
+        if(status) {
             productItem.classList.add(`product--${status}`);
         }
 
