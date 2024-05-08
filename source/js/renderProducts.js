@@ -16,14 +16,7 @@ export default (products, template, target, isTargetList = false, templateClass 
         node.classList.add(templateClass);
         productElement = node;
     } 
-    // else {
-    //     const node = document.createElement(`div`);
-    //     node.appendChild(productElement);
-    //     node.classList.add(templateClass);
-    //     productElement = node;
-    // }
-
-
+    
     products.forEach( product => {
         const itemElement = productElement.cloneNode(true);
         const productItem = itemElement.querySelector('.product');
@@ -39,7 +32,10 @@ export default (products, template, target, isTargetList = false, templateClass 
         imageElement.src = image;
         nameElement.textContent = name;
         priceElement.textContent = `${price} ₽`;
-        oldPriceElement.textContent = `${oldPrice} ₽`;
+
+        if(oldPrice?.length) {
+            oldPriceElement.textContent = `${oldPrice} ₽`;
+        }
 
         if(isBig) {
             productItem.classList.add('product--big');
@@ -49,7 +45,7 @@ export default (products, template, target, isTargetList = false, templateClass 
             itemElement.classList.add('best-selling__product--small');
         }
 
-        if(status.length) {
+        if(status?.length) {
             productItem.classList.add(`product--${status}`);
         }
 
