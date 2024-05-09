@@ -1,3 +1,4 @@
+import { addProductToCart } from './productCart.js';
 
 export default (products, template, target, isTargetList = false, templateClass = '') => {
 
@@ -27,6 +28,17 @@ export default (products, template, target, isTargetList = false, templateClass 
         const buttonElement = itemElement.querySelector('.product__button');
         const {id, isBig, status, image, name, price, oldPrice} = product;
 
+        buttonElement.addEventListener('click', () => {
+            addProductToCart(
+                {
+                    id: product.id,
+                    name: product.name,
+                    image: product.image,
+                    price: product.price,
+                },
+                true
+            );
+        });
 
         itemElement.dataset.productId = id;
         imageElement.src = image;

@@ -1,0 +1,126 @@
+.shopping-cart {
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 0px #5150761A;
+    padding: 29px 20px;
+    width: 300px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    display: none;
+
+    @media (min-width: 1728px) {
+        width: 614px;
+        font-size: 21px;
+        line-height: 29px;
+        padding: 30px 20px 19px;
+    }
+
+    &--showed {
+        display: block;
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 15px
+    }
+
+    &__list {
+        @include clear-list;
+    }
+
+
+    &__item {
+        border-bottom: 1px solid #E0E0E0;
+        border-top: 1px solid #E0E0E0;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__image {
+        width: 47px;
+        height: 49px;
+        order: 1;
+        margin-right: 15px;
+
+        @media (max-width: 1728px) {
+            margin-right: 20px;
+        }
+    }
+
+    &__name {
+        margin: 0;
+        order: 2;
+        flex: 63%;
+
+        @media (min-width: 1728px) {
+            flex: 0 1 auto;
+            margin-right: 33px;
+        }
+    }
+
+    &__plusminus-button {
+        width: 66px;
+        height: 25px;
+        font-size: 21px;
+        order: 3;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 1728px) {
+            width: 86px;
+            border-right: 1px solid #000000;
+            border-left: 1px solid #000000;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            padding: 5px;
+        }
+    }
+
+    &__price {
+        font-size: 24px;
+        order: 4;
+    }
+
+    &__amount-product {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        @media (min-width: 1728px) {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__order-button {
+        width: 260px;
+        height: 63px;
+        background-color: #DC4B54;
+        text-align: center;
+
+        @media (min-width: 1728px) {
+            margin-left: auto;
+            width: 312px;
+        }
+
+        a {
+            display: block;
+            padding: 16px 30px;
+            font-size: 20px;
+            color: #FFFFFF;
+
+            @media (min-width: 1728px) {
+                padding: 16px 56px;
+            }
+        }
+    }
+}

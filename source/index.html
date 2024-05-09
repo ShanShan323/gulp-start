@@ -32,17 +32,45 @@
 
         <div class="header__user-action">
           <button type="button" class="header__search ">
-            <img src="img/search_icon.svg" alt="search icon">
+            <img class="header__action-image" src="img/search_icon.svg" alt="search icon">
           </button>
-          <button type="button" class="header__shop-cart">
-            <span class="header__item-counter">15</span>
-            <img src="img/shopping_cart_icon.svg" alt="shopping cart icon">
-          </button>
+          <div class="header__shop-cart">
+            <a class="header__shop-link" href="">
+              <span class="header__item-counter">15</span>
+              <img src="img/shopping_cart_icon.svg" alt="shopping cart icon">
+            </a>
+            <div class="header__product-wrapper shopping-cart">
+              <template id="shopping-cart-product">
+                <li class="shopping-cart__item">
+                  <a href="#" class="shopping-cart__link">
+                    <img class="shopping-cart__image" src="img/slide-mini-sneaker-1.png" alt="первый товар">
+                  </a>
+                    <p class="shopping-cart__name">Running sport shoe</p>
+                    <div class="shopping-cart__plusminus-button">
+                      <span class="shopping-cart__minus">-</span>
+                      <span class="shopping-cart__count">1</span>
+                      <span class="shopping-cart__plus">+</span>
+                    </div>
+                    <span class="shopping-cart__price">3999 ₽</span>
+                </li>
+              </template>
+              <span class="shopping-cart__title">Корзина товаров</span>
+              <ul class="shopping-cart__list"></ul>
+              <div class="shopping-cart__amount-product">
+                <span class="shopping-cart__total">Итого</span>
+                <span class="shopping-cart__amount">5шт.</span>
+                <span class="shopping-cart__cost">25000₽</span>
+              </div>
+            <div class="shopping-cart__order-button">
+              <a href="">Оформить заказ</a>
+            </div>
+            </div>
+          </div>
           <button type="button" class="header__open-menu">
-            <img src="img/menu_icon.svg" alt="menu open icon">
+            <img class="header__action-image" src="img/menu_icon.svg" alt="menu open icon">
           </button>
           <button type="button" class="header__close-menu header__close-menu--hidden">
-            <img src="img/closed_icon.svg" alt="menu close icon">
+            <img class="header__action-image" src="img/closed_icon.svg" alt="menu close icon">
           </button>
         </div>
         
@@ -230,12 +258,6 @@
       <section class="best-selling">
 
         <div class="best-selling__container container">
-
-          <div class="best-selling__add-item modal modal--hidden modal--size modal--shadow modal--border-round modal--bg-white">
-            <button type="button" class="modal__close"><img src="img/closed_icon.svg" alt="icon of close button"></button>
-            <span class="modal__text">Товар успешно добавлен в корзину</span>
-            <button class="modal__continue modal__continue--shadow modal__continue--bg-black modal__continue--text-white">Продолжить покупки</button>
-          </div>
           
           <h2 class="best-selling__title title title--line-around">Best Selling</h2>
 
@@ -344,6 +366,19 @@
       </footer>
 
     </main>
+
+    <div id="modal_cart" class="best-selling__add-item modal modal--hidden modal--size modal--shadow modal--border-round modal--bg-white">
+      <button type="button" class="modal__close"><img src="img/closed_icon.svg" alt="icon of close button"></button>
+      <span class="modal__text">Товар успешно добавлен в корзину</span>
+      <button class="modal__continue modal__continue--shadow modal__continue--bg-black modal__continue--text-white">Продолжить покупки</button>
+    </div>
+
+    <div id="modal_cart_error" class="best-selling__add-item modal modal--hidden modal--size modal--shadow modal--border-round modal--bg-white">
+      <button type="button" class="modal__close"><img src="img/closed_icon.svg" alt="icon of close button"></button>
+      <span class="modal__text">Ошибка</span>
+      <button class="modal__continue modal__continue--shadow modal__continue--bg-black modal__continue--text-white">Продолжить покупки</button>
+    </div>
+
     <script src="js/main.js" defer type="module"></script>
     <script src="js/script.js" defer></script>
   </body>
