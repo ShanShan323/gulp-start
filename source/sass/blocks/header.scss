@@ -1,9 +1,15 @@
 .header {
-    @media (min-width:1728px) {
-        position: absolute;
-        z-index: 5;
-        width: 100%;
-    }
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+
+    // @media (min-width:1728px) {
+    //     position: absolute;
+    //     z-index: 5;
+    //     width: 100%;
+    // }
+    
     &__container {
         display: flex;
         justify-content: space-between;
@@ -160,8 +166,6 @@
 
         button {
             @include clear-button;
-
-            position: relative;
         }
     }
 

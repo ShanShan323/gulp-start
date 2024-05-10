@@ -4,7 +4,7 @@ import { openModal, closeModal } from './modals.js';
 const modalCart = document.querySelector('#modal_cart');
 const modalCartError = document.querySelector('#modal_cart_error');
 const blockMenu = document.querySelector('.header__shop-cart');
-const cart = blockMenu.querySelector('.shopping-cart');
+const cart = document.querySelector('.shopping-cart');
 const cartList = cart.querySelector('.shopping-cart__list');
 const cartOpenedButton = blockMenu.querySelector('.header__shop-link');
 const cartCount = blockMenu.querySelector('.header__item-counter');
@@ -71,6 +71,7 @@ const openCart = (event) => {
     }
 
     cart.classList.add('shopping-cart--showed');
+    cart.querySelector('shopping-cart__close').addEventListener('click', closeCart);
 };
 
 const closeCart = (event) => {

@@ -1,21 +1,20 @@
 .modal {
     padding: 20px 23px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: -1px 3px 17px 3px rgb(0 0 0 / 20%);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 110;
 
     &--hidden {
         display: none;
-    }
-
-    &--border-round {
-        border-radius: 20px;
-    }
-
-    &--bg-white {
-        background-color: white;
     }
 
     &--size {
@@ -24,18 +23,6 @@
         @media (min-width: 768px) {
             width: 464px;
         }    
-    }
-
-    &--shadow {
-        box-shadow: -1px 3px 17px 3px rgb(0 0 0 / 20%);
-    }
-
-    &--pad-foot {
-        padding: 30px 18px;
-
-        @media (min-width: 768px) {
-            padding: 50px 34px;
-        }
     }
 
     &__close {
@@ -52,23 +39,31 @@
     }
 
     &__text {
+        display: block;
         font-size: 20px;
         line-height: 24px;
         font-weight: 500;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        color: #000;
 
         @media (min-width: 768px) {
             font-size: 32px;
             line-height: 38px;
-            margin-bottom: 37px;
+            margin-bottom: 25px;
         }
 
-        &--margin-0 {
-            margin: 0;
+        &--red {
+            color: #DC4B54;
         }
+    }
 
-        &--black {
-            color: #000;
+    &__description {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 12px;
+
+        @media (min-width: 1728px) {
+            font-size: 20px;
         }
     }
 
@@ -78,6 +73,9 @@
         line-height: 24px;
         font-weight: 600;
         padding: 12px 30px;
+        color: white;
+        background-color: black;
+        box-shadow: -2px 12px 85px 0 rgb(0 0 0 / .2);
 
         @media (min-width: 768px) {
             width: 312px;
@@ -88,18 +86,6 @@
 
         &--hidden {
             display: none;
-        }
-
-        &--text-white {
-            color: white;
-        }
-
-        &--bg-black {
-            background-color: black;
-        }
-
-        &--shadow {
-            box-shadow: -2px 12px 85px 0 rgb(0 0 0 / .2);
         }
     }
 }

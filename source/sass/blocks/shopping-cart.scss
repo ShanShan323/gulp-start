@@ -7,13 +7,24 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 19px;
+    position: fixed;
+    top: 50px;
+    right: 25px;
+    z-index: 110;
     display: none;
+
+    @media (min-width: 768px) {
+        top: 70px;
+        right: 22px;
+    }
 
     @media (min-width: 1728px) {
         width: 614px;
         font-size: 21px;
         line-height: 29px;
         padding: 30px 20px 19px;
+        top: 135px;
+        right: 75px;
     }
 
     &--showed {
@@ -87,6 +98,14 @@
     &__price {
         font-size: 24px;
         order: 4;
+    }
+
+    &__close {
+        position: absolute;
+        top: 8px;
+        right: 6px;
+        width: 25px;
+        height: 25px;
     }
 
     &__amount-product {
