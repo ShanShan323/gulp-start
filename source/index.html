@@ -366,20 +366,23 @@
         </a>
         <p class="shopping-cart__name">Running sport shoe</p>
         <div class="shopping-cart__plusminus-button">
-          <span class="shopping-cart__minus">-</span>
-          <span class="shopping-cart__count">1</span>
-          <span class="shopping-cart__plus">+</span>
+          <button class="shopping-cart__minus" type="button">-</button>
+          <input class="shopping-cart__count" type="text" placeholder="0">
+          <button class="shopping-cart__plus" type="button">+</button>
         </div>
         <span class="shopping-cart__price">3999 ₽</span>
       </li>
     </template>
-    <button type="button" class="shopping-cart__close"><img src="img/closed_icon.svg" alt="icon of close button"></button>
+    <button class="shopping-cart__close" type="button"><img src="img/closed_icon.svg" alt="icon of close button"></button>
     <span class="shopping-cart__title">Корзина товаров</span>
     <ul class="shopping-cart__list"></ul>
     <div class="shopping-cart__amount-product">
       <span class="shopping-cart__total">Итого</span>
-      <span class="shopping-cart__amount">5шт.</span>
-      <span class="shopping-cart__cost">25000₽</span>
+      <span>
+        <span class="shopping-cart__amount">0</span>
+        <span class="shopping-cart__unit">шт.</span>
+      </span>
+      <span class="shopping-cart__cost">0 ₽</span>
     </div>
     <div class="shopping-cart__order-button">
       <a href="#">Оформить заказ</a>

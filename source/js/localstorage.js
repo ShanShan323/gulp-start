@@ -3,18 +3,15 @@ export const getStorage = (storageName) => {
 };
 
 export const addToStorage = (storageName, data) => {
-    let storageArr = [storageName];
+    let storageArr = [data];
 
-    const storageData = JSON.parse(localStorage.getItem(data));
-
+    const storageData = JSON.parse(localStorage.getItem(storageName));
     if(storageData) {
-        if(storageData.map(el => el.id).includes(storageName.id)) {
-            return;
-        }
-
+    console.log(storageData);
+    console.log(storageArr);
         storageArr = [...storageData, ...storageArr];
     }
-    localStorage.setItem(data, JSON.stringify(storageArr));
+    localStorage.setItem(storageName, JSON.stringify(storageArr));
 };
 
 export const removeFromStorage = (id, storageName) => {

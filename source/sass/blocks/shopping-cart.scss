@@ -73,25 +73,40 @@
     }
 
     &__plusminus-button {
+        @include clear-button;
+
         width: 66px;
         height: 25px;
-        font-size: 21px;
         order: 3;
+        padding: 0 5px;
         margin-right: auto;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
+        gap: 8px;
 
         @media (min-width: 1728px) {
-            width: 86px;
+            width: 110px;
             border-right: 1px solid #000000;
             border-left: 1px solid #000000;
         }
 
-        span {
+        button {
             display: block;
-            text-align: center;
-            padding: 5px;
+            font-size: 21px
+            
+        }
+    }
+
+    &__count {
+        @include clear-input;
+        width: 25px;
+        font-size: 21px;
+        text-align: center;
+        
+
+        @media (min-width: 1728px) {
+            width: 40px;
         }
     }
 

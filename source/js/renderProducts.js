@@ -1,4 +1,7 @@
-import { addProductToCart } from './productCart.js';
+import { renderCart } from './productCart.js';
+import { addToStorage, removeFromStorage, getStorage } from './localstorage.js';
+import { openModal } from './modals.js';
+
 
 export default (products, template, target, isTargetList = false, templateClass = '') => {
 
@@ -29,15 +32,8 @@ export default (products, template, target, isTargetList = false, templateClass 
         const {id, isBig, status, image, name, price, oldPrice} = product;
 
         buttonElement.addEventListener('click', () => {
-            addProductToCart(
-                {
-                    id: product.id,
-                    name: product.name,
-                    image: product.image,
-                    price: product.price,
-                },
-                true
-            );
+            addToStorage('cart', product);
+            renderCart();
         });
 
         itemElement.dataset.productId = id;
