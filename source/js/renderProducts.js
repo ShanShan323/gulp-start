@@ -6,6 +6,7 @@ import { openModal } from './modals.js';
 export default (products, template, target, isTargetList = false, templateClass = '') => {
 
     const fragment = document.createDocumentFragment();
+    const modalCart = document.querySelector('#modal_cart');
 
     let productElement = template.querySelector('.best-selling__product');
 
@@ -34,6 +35,7 @@ export default (products, template, target, isTargetList = false, templateClass 
         buttonElement.addEventListener('click', () => {
             addToStorage('cart', product);
             renderCart();
+            openModal(modalCart);
         });
 
         itemElement.dataset.productId = id;

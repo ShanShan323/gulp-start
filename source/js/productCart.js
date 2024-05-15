@@ -3,12 +3,12 @@ import { openModal, closeModal } from './modals.js';
 
 const modalCart = document.querySelector('#modal_cart');
 const modalCartError = document.querySelector('#modal_cart_error');
+const modalOverlay = document.querySelector('.overlay');
 const blockMenu = document.querySelector('.header__shop-cart');
 const cart = document.querySelector('.shopping-cart');
 const cartList = cart.querySelector('.shopping-cart__list');
 const cartOpenedButton = blockMenu.querySelector('.header__shop-link');
 const cartCount = blockMenu.querySelector('.header__item-counter');
-const cartProductTemplate = document.querySelector('#shopping-cart-product').content;
 
 const costCart = () => {
     const cart = getStorage('cart');
@@ -119,15 +119,19 @@ const openCart = (event) => {
     }
 
     cart.classList.add('shopping-cart--showed');
+    modalOverlay.classList.add('overlay--showed');
     cart.querySelector('.shopping-cart__close').addEventListener('click', closeCart);
+
+    cart.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', closeCart);
+
 };
 
 const closeCart = (event) => {
     if(blockMenu.contains(event.target)) {
-        return;
-    }
-
-    if(cartList.contains(event.target)) {
         return;
     }
 
@@ -136,10 +140,10 @@ const closeCart = (event) => {
     }
 
     cart.classList.remove('shopping-cart--showed');
+    modalOverlay.classList.remove('overlay--showed');
+    document.removeEventListener('click', closeCart);
 };
 
 cartOpenedButton.addEventListener('click', openCart);
-
-document.addEventListener('click', closeCart);
 
 export { removeProductFromCart, renderCart };
