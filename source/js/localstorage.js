@@ -7,8 +7,7 @@ export const addToStorage = (storageName, data) => {
 
     const storageData = JSON.parse(localStorage.getItem(storageName));
     if(storageData) {
-    console.log(storageData);
-    console.log(storageArr);
+        
         storageArr = [...storageData, ...storageArr];
     }
     localStorage.setItem(storageName, JSON.stringify(storageArr));

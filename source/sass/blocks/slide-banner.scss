@@ -1,29 +1,55 @@
 .slide-banner {
-    &__wrapper {
-        position: relative;
+    position: relative;
+
+    &__swiper {
+        overflow: hidden;
     }
 
-    &__indicator {
+    &__pagination {
         position: absolute;
-        top: 94%;
-        right: 34%;
+        top: 94% !important;
+        right: 39% !important;
+        z-index: 68;
+        width: auto !important;
+        left: auto !important;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        transition: width 0.3s ease;
 
         @media (min-width: 768px) {
-            top: 95%;
-            right: 0;
+            top: 95% !important;
+            right: 8% !important;
         }
     }
 
-    &__swap-left {
+    &__swap {
         display: none;
+        background-image: url("../img/slide-left.svg");
+        background-repeat: no-repeat;
 
         @media (min-width: 768px) {
             display: block;
             position: absolute;
             width: 19px;
-            height: 11px;
+            height: 25px;
             top: 48%;
-            left: 1%;
+            z-index: 5;
+            cursor: pointer;
+
+        }
+
+        &--left {
+            left: 6%;
+
+            @media (min-width: 1728px) {
+                left: 9%;
+            }
+        }
+
+        &--right {
+            transform: rotate(180deg);
+            left: 91%;
         }
     }
 

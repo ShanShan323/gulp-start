@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ваш проект</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
     <header class="header">
@@ -194,10 +195,53 @@
 
       <section class="slide-banner">
         <div class="slide-banner__container container">
-          <div class="slide-banner__wrapper">
-            <ul class="slide-banner__list banner">
-              <li class="banner__item  banner__item--border-round banner__item--bg-color banner__item--bg-slick">
-                
+        <div class="slide-banner__swiper">
+
+              <button class="slide-banner__swap slide-banner__swap--left"></button>
+              <button class="slide-banner__swap slide-banner__swap--right"></button>
+          
+            <div class="slide-banner__pagination"></div>
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+            <!-- <div class="slide-banner__pagination pagination">
+              <div class="pagination__item pagination__item--bg-white"></div>
+              <div class="pagination__item pagination__item--big pagination__item--bg-white"></div>
+              <div class="pagination__item pagination__item--bg-white"></div>
+            </div> -->
+
+            <ul class="slide-banner__list banner swiper-wrapper">
+
+              <li class="swiper-slide banner__item banner__item--bg-red banner__item--bg-slick">
+                <div class="banner__content-wrapper">
+                  <span class="banner__subtitle banner__title--text-size banner__title--text-white">Ты готов</span>
+                  <h3 class="banner__title">
+                    проложить свой путь?
+                  </h3>
+                  <button class="banner__button">См Все</button>
+                  <ul class="banner__link-list">
+                    <li><a href="#" class="banner__link-item"><img src="img/slide-mini-sneaker-1.png" alt=""></a></li>
+                    <li><a href="#" class="banner__link-item"><img src="img/slide-mini-sneaker-2.png" alt=""></a></li>
+                    <li><a href="#" class="banner__link-item"><img src="img/slide-mini-sneaker-3.png" alt=""></a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="swiper-slide banner__item banner__item--bg-blue banner__item--bg-slick">
+                <div class="banner__content-wrapper">
+                  <span class="banner__subtitle">Ты готов</span>
+                  <h3 class="banner__title">
+                    проложить свой путь?
+                  </h3>
+                  <button class="banner__button">См Все</button>
+                  <ul class="banner__link-list">
+                    <li><a href="#" class="banner__link-item"><img src="img/slide-mini-sneaker-1.png" alt=""></a></li>
+                    <li><a href="#" class="banner__link-item"><img src="img/slide-mini-sneaker-2.png" alt=""></a></li>
+                    <li><a href="#" class="banner__link-item"><img src="img/slide-mini-sneaker-3.png" alt=""></a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="swiper-slide banner__item banner__item--bg-green banner__item--bg-slick">
                 <div class="banner__content-wrapper">
                   <span class="banner__subtitle banner__title--text-size banner__title--text-white">Ты готов</span>
                   <h3 class="banner__title banner__title--text-size banner__title--text-white">
@@ -210,21 +254,11 @@
                     <li><a href="#" class="banner__link-item"><img src="img/slide-mini-sneaker-3.png" alt=""></a></li>
                   </ul>
                 </div>
-                
               </li>
+
             </ul>
-
-            <div class="slide-banner__swaper ">
-              <button class="slide-banner__swap-left"><img src="img/slide-left.svg" alt="#"></button>
-              <button class="slide-banner__swap-right"><img src="img/slide-right.svg" alt="#"></button>
-            </div>
-
-            <div class="slide-banner__indicator slider-indicator">
-              <div class="slider-indicator__item slider-indicator__item--small slider-indicator__item--bg-white slider-indicator__item--round"></div>
-              <div class="slider-indicator__item slider-indicator__item--big slider-indicator__item--bg-white slider-indicator__item--half-round"></div>
-              <div class="slider-indicator__item slider-indicator__item--small slider-indicator__item--bg-white slider-indicator__item--round"></div>
-            </div>
             
+          
           </div>
         </div>
       </section>
