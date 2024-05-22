@@ -1,4 +1,4 @@
-import { getApi } from './getApi.js';
+import { getApi } from './api.js';
 import renderProducts from './renderProducts.js';
 import './productCart.js';
 import './sliders.js';

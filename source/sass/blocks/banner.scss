@@ -1,5 +1,6 @@
 .banner {
     @include clear-list;
+    padding-top: 103px;
 
     &__link-list {
         @include clear-list;
@@ -33,7 +34,7 @@
         }
 
         &--bg-green {
-            background-color: #5ee269;
+            background-color: #5c9f62;
         }
 
         &--bg-slick {
@@ -56,19 +57,19 @@
         &::before {
             @media (min-width: 768px) {
                 content: "";
-                width: 499px;
-                height: 499px;
+                width: 599px;
+                height: 599px;
                 background-image: url("../img/feet-for-banner.png");
                 background-size: contain;
                 position: absolute;
                 z-index: 5;
-                left: -24px;
-                top: 118px;
+                left: -12%;
+                top: 5%;
 
                 @media (min-width: 1728px) {
-                    width: 803px;
-                    height: 803px;
-                    top: -163px;
+                    width: 1050px;
+                    height: 1050px;
+                    top: -61%;
                     left: 25px;
                 }
             }
@@ -82,7 +83,6 @@
         
         @media (min-width: 1728px) {
             width: 737px;
-            transform: translateX(107%);
             align-items: initial;
         }
     }

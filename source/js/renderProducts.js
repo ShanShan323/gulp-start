@@ -1,5 +1,5 @@
 import { renderCart } from './productCart.js';
-import { addToStorage, removeFromStorage, getStorage } from './localstorage.js';
+import { addToStorage } from './localstorage.js';
 import { openModal } from './modals.js';
 
 
@@ -32,10 +32,10 @@ export default (products, template, target, isTargetList = false, templateClass 
         const buttonElement = itemElement.querySelector('.product__button');
         const {id, isBig, status, image, name, price, oldPrice} = product;
 
-        buttonElement.addEventListener('click', () => {
+        buttonElement.addEventListener('click', (event) => {
             addToStorage('cart', product);
             renderCart();
-            openModal(modalCart);
+            openModal(modalCart, event);
         });
 
         itemElement.dataset.productId = id;
