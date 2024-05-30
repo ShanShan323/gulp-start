@@ -1,8 +1,12 @@
-import { addProductToCart } from './productCart.js';
+import { renderCart } from './productCart.js';
+import { addToStorage } from './localstorage.js';
+import { openModal } from './modals.js';
+
 
 export default (products, template, target, isTargetList = false, templateClass = '') => {
 
     const fragment = document.createDocumentFragment();
+    const modalCart = document.querySelector('#modal_cart');
 
     let productElement = template.querySelector('.best-selling__product');
 
@@ -28,16 +32,10 @@ export default (products, template, target, isTargetList = false, templateClass 
         const buttonElement = itemElement.querySelector('.product__button');
         const {id, isBig, status, image, name, price, oldPrice} = product;
 
-        buttonElement.addEventListener('click', () => {
-            addProductToCart(
-                {
-                    id: product.id,
-                    name: product.name,
-                    image: product.image,
-                    price: product.price,
-                },
-                true
-            );
+        buttonElement.addEventListener('click', (event) => {
+            addToStorage('cart', product);
+            renderCart();
+            openModal(modalCart, event);
         });
 
         itemElement.dataset.productId = id;

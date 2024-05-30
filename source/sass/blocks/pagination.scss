@@ -1,0 +1,17 @@
+.pagination {
+
+    &__item {
+        display: block;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 11px;
+        height: 11px;
+        transition: width 0.3s;
+    
+        &--big {
+            width: 30px;
+            height: 11px;
+            border-radius: 20px;
+        }
+    }
+}
