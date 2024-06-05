@@ -2,8 +2,7 @@ const overlay = document.querySelector('.overlay');
 
 class Modal {
     constructor (idOfElement) {
-        this.modalId = idOfElement;
-        this.modal = document.querySelector(`#${this.modalId}`);
+        this.modal = document.querySelector(`#${idOfElement}`);
         this.modalClose = this.modal.querySelectorAll('.modal__close');
         this.modalContinue = this.modal.querySelectorAll('.modal__continue');
     }
