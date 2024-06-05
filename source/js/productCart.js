@@ -1,11 +1,6 @@
 import { addToStorage, removeFromStorage, getStorage } from './localstorage.js';
-import { openModal } from './modals.js';
 
-const modalCartError = document.querySelector('#modal_cart_error');
 const blockMenu = document.querySelector('.header__shop-cart');
-const cart = document.querySelector('#shopping-cart');
-const cartList = cart.querySelector('.shopping-cart__list');
-const cartOpenedButton = blockMenu.querySelector('.header__shop-link');
 const cartCount = blockMenu.querySelector('.header__item-counter');
 
 const costCart = () => {
@@ -91,7 +86,5 @@ const renderCart = () => {
 };
 
 renderCart();
-
-cartOpenedButton.addEventListener('click',(event) => openModal(cart, event));
 
 export { renderCart };

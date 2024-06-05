@@ -72,21 +72,15 @@
     }
 
     &__button {
-        @include clear-button;
-
-        font-size: 14px;
         padding: 8px 38px;
-        border: 2px solid #000;
 
-        @media (min-width: 768px) {
-            font-size: 28px;
-            padding: 20px 48px;
-            gap: 80px;
+        @media (max-width: 767px) {
+            font-size: 14px;
         }
 
-        &--black-button {
-            background-color: black;
-            color: #fff;
+        @media (min-width: 768px) {
+            padding: 20px 48px;
+            gap: 80px;
         }
     }
 
@@ -106,13 +100,7 @@
     }
 
     &__show-all {
-        @include clear-button;
-
-        font-size: 28px;
-        font-weight: 600;
         width: 290px;
         height: 77px;
-        background-color: black;
-        color: #fff;
     }
 }
