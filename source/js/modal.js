@@ -5,24 +5,25 @@ class Modal {
         this.modal = document.querySelector(`#${idOfElement}`);
         this.modalClose = this.modal.querySelectorAll('.modal__close');
         this.modalContinue = this.modal.querySelectorAll('.modal__continue');
+        this.closeModal = this.closeModal.bind(this);
     }
     
-    closeModal = () => {
-        this.modal.classList.toggle('modal--hidden');
+    closeModal () {
         overlay.classList.toggle('overlay--hidden');
+        this.modal.classList.toggle('modal--hidden');
         
+        overlay.removeEventListener('click', this.closeModal);
         this.modalClose.forEach(modal => modal.removeEventListener('click', this.closeModal));
         this.modalContinue.forEach(modal => modal.removeEventListener('click', this.closeModal));
-        overlay.removeEventListener('click', this.closeModal);
     };
 
     openModal () {
-        this.modal.classList.toggle('modal--hidden');
         overlay.classList.toggle('overlay--hidden');
+        this.modal.classList.toggle('modal--hidden');
 
+        overlay.addEventListener('click', this.closeModal);
         this.modalClose.forEach(modal => modal.addEventListener('click', this.closeModal));
         this.modalContinue.forEach(modal => modal.addEventListener('click', this.closeModal));
-        overlay.addEventListener('click', this.closeModal);
     };
 }
 
