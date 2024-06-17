@@ -61,11 +61,6 @@
     &__show-all {
         display: block;
         padding: 18px 48px;
-        font-size: 28px;
-        font-weight: 600;
-        line-height: 43px;
-        background-color: black;
-        color: #fff;
 
         @media (max-width: 767px) {
             display: none;
@@ -74,12 +69,7 @@
 
     &__show-all-mobile {
         display: block;
-        font-size: 20px;
-        line-height: 30px;
-        font-weight: 600;
         padding: 13px 43px;
-        background-color: black;
-        color: #fff;
         margin: 0 auto;
         
         @media (min-width: 768px) {
@@ -93,6 +83,10 @@
 
     &__product-wrapper {
         margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
 
         @media (min-width: 1728px) {
             display: flex;

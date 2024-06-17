@@ -1,15 +1,41 @@
 .button {
+    @include clear-button;
 
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #FFFFFF;
+    background-color: #000000;
+    box-shadow: 2px 15px 20px 13px rgb(0 0 0 / 16%);
 
-    &--text-white {
-        color: #FFFFFF;
+    @media (min-width: 768px) {
+        font-size: 28px;
+        line-height: 43px;
+        font-weight: 600;
     }
 
-    &--bg-black {
-        background-color: #000000;
+    &--bgWhite {
+        background-color: #FFFFFF;
+        color: #000;
     }
 
-    &--shadow {
-        box-shadow: 2px 15px 20px 13px rgb(0 0 0 / 16%);
+    &--textRed {
+        color: #DC4B54;
+    }
+
+    &--textBlue {
+        color: #36b4aa;
+    }
+
+    &--textGreen {
+        color: #5c9f62
+    }
+
+    &--border {
+        border: 2px solid #000;
+    }
+
+    &--shadowNone {
+        box-shadow: none;
     }
 }

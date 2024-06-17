@@ -1,15 +1,18 @@
-import { renderCart } from './productCart.js';
 import { addToStorage } from './localstorage.js';
-import { openModal } from './modals.js';
+import { Modal } from './modal.js';
+import { ShoppingCart } from './shoppingCart.js';
 
+const cart = new ShoppingCart('#shopping-cart');
+
+cart.render();
 
 export default (products, template, target, isTargetList = false, templateClass = '') => {
 
     const fragment = document.createDocumentFragment();
-    const modalCart = document.querySelector('#modal_cart');
-
+    const modalCart = new Modal('#modal_cart');
     let productElement = template.querySelector('.best-selling__product');
 
+    
     if(isTargetList) {
         const node = document.createElement('li');
         node.innerHTML = productElement.innerHTML;
@@ -32,10 +35,10 @@ export default (products, template, target, isTargetList = false, templateClass 
         const buttonElement = itemElement.querySelector('.product__button');
         const {id, isBig, status, image, name, price, oldPrice} = product;
 
-        buttonElement.addEventListener('click', (event) => {
+        buttonElement.addEventListener('click', () => {
             addToStorage('cart', product);
-            renderCart();
-            openModal(modalCart, event);
+            cart.render();
+            modalCart.openModal();
         });
 
         itemElement.dataset.productId = id;
