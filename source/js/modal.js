@@ -2,6 +2,7 @@
 class Modal {
     static _overlay = document.querySelector('.overlay');
     static _modals = document.querySelectorAll('.modal');
+    
     constructor (idOfElement) {
         this._modal = document.querySelector(idOfElement);
         this._modalClose = this._modal.querySelectorAll('.modal__close');
